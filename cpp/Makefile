@@ -1,6 +1,6 @@
 
 CXX = g++
-//CXXFLAGS = -Wall -O0 -g --std=c++11
+#CXXFLAGS = -Wall -O0 -g --std=c++11
 CXXFLAGS = -Wall -O0 -g --std=c++14
 BINARY = out
 last_source = $(shell ls -tr | grep \\.cc | tail -1)
@@ -8,6 +8,15 @@ last_source = $(shell ls -tr | grep \\.cc | tail -1)
 last:
 	$(CXX) $(CXXFLAGS) -o $(BINARY) $(last_source)
 
-run:
+s:
+	$(CXX) -S $(last_source)
+
+e:
+	$(CXX) -E $(last_source)
+
+v:
+	vim $(last_source)
+
+r:
 	./out
 
