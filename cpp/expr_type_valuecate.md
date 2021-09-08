@@ -1,10 +1,19 @@
+
+https://en.cppreference.com/w/c/language/type
 https://en.cppreference.com/w/cpp/language/value_category
 
-#### 表达式
-表达式包括：变量，字面值，等等。
-
-#### 类型和类别
+#### 表达式类型和类别
 任何表达式都有两个属性，一个是type，一个是value category，我们一般翻译为类型和值类别。
+
+这这句话，我们可以看出，类型，是针对表达式的。变量只是表达式的一种。值类别也是针对表达式的。
+
+表达式都有一个值，这个值有类型，还有类别。
+
+#### 指针引用是type中的类型么
+不是，这个是另外一个维度的概念。cppreference描述的的时候，都是`pointer of / reference of`。
+
+#### 那什么是表达式
+表达式包括：变量，字面值，等等。
 
 #### 值类别
 注意这里不是值类型，而是值类别，类别分左值右值，细分有几类呢？
