@@ -1,5 +1,10 @@
 #### 为什么需要 dynamic_cast
-引用，指针和值类型之间的转换，
+如果只是单继承，那么，各种指针之间的转型并不会改变指针的值。
+
+向下转换，特别是菱形继承等继承关闭比较复杂的场景下的的转型，能进行运行时检查。
+一个 指向MostDerived实例的pRight指针，要转换为pLeft类型的指针。
+
+还有一个原因是，dynamic_cast能进行一些检查，如果cast失败，会有异常抛出或者返回null。
 
 #### dynamic_cast 从语言的角度来说是修饰符还是运算符？
 虽然cppreference只是说，这是一个conversion，但准确说，我认为这是运算符（operator），和sizeof()一样。
