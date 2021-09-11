@@ -1,3 +1,6 @@
+https://en.cppreference.com/w/cpp/language/dynamic_cast
+https://stackoverflow.com/questions/35959921/what-is-side-cast-or-cross-cast-in-dynamic-cast-in-c
+
 #### 为什么需要 dynamic_cast
 看cpprefernece，我们看dynamic_cast能实现的功能，我们知道，其中的第4条，第5条是dynamic_cast独有的。
 但是，我现在感觉，dynamic_cast能做void-convert，以及在downcast时做运行时检查，以及能做一个sidecast。
