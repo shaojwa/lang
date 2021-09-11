@@ -1,5 +1,10 @@
+
 ## 为什么需要 static_cast.md
 
+## static_cast < new_type > ( expression ) 如果返回指针，指针的值和参数的值会变么？
+会
+
+## static_cast
 ## description
 > Converts between types using a combination of implicit and user-defined conversions
 
