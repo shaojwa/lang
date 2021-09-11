@@ -1,10 +1,14 @@
 
-## 为什么需要 static_cast.md
+#### 为什么需要 static_cast.md
 
-## static_cast < new_type > ( expression ) 如果返回指针，指针的值和参数的值会变么？
+#### static_cast < new_type > ( expression ) 如果返回指针，指针的值和参数的值会变么？
 会
 
-## static_cast
+#### static_cast < new_type > ( expression ) 提示 is an ambiguous base of 的原因是什么
+因为new_type在expression的类型中，不是唯一的（unique），也就是说expression类型的对象中，有两个new_type类型的子对象。
+这种情况的原因常常和多重继承有关系。
+
+
 ## description
 > Converts between types using a combination of implicit and user-defined conversions
 
