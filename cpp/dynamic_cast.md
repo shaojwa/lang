@@ -1,15 +1,7 @@
 #### 为什么需要 dynamic_cast
 看cpprefernece，我们看dynamic_cast能实现的功能，我们知道，其中的第4条，第5条是dynamic_cast独有的。
-
-
-#### down_cast为什么需要多态类
-
-如果只是单继承，那么，各种指针之间的转型并不会改变指针的值。
-
-向下转换，特别是菱形继承等继承关闭比较复杂的场景下的的转型，能进行运行时检查。
-一个 指向MostDerived实例的pRight指针，要转换为pLeft类型的指针。
-
-还有一个原因是，dynamic_cast能进行一些检查，如果cast失败，会有异常抛出或者返回null。
+但是，我现在感觉，dynamic_cast能做void-convert，以及在downcast时做运行时检查，以及能做一个sidecast。
+但是似乎并没有足够的理由使用dynamic_cast。何况这几个功能都需要是多态类。
 
 #### dynamic_cast 从语言的角度来说是修饰符还是运算符？
 虽然cppreference只是说，这是一个conversion，但准确说，我认为这是运算符（operator），和sizeof()一样。
@@ -34,11 +26,11 @@ Dog() 这个表达式返回的是一个右值，而Dog&决定dynamic_cast需要�
 
 #### dynamic_cast 的独特之处
 dynamic_cast 可以增加const属性，这当然不是它的独特之处，static_cast可以做。
-dynamic_cast 可以向下转型，这也不是它的独特之处，static_cast一样可以做。
+dynamic_cast 可以做downcast转型，这也不是它的独特之处，static_cast一样可以做。
 
 dynamic_cast有的强悍之处体现在多态场景，其中如果new_type是 void-pointer，那么返回值会是expression所指向的对象的对应的继承最多的类的对象。
-这个说法比较绕，看看cppreference理解下就好。
+这个说法比较绕，看看cppreference理解下就好。dynamic_cast的第二个强悍之处在于向下转型时，即base转到derived，这个在类似的分发函数中很常见。
+这个时候，运行时检查就会执行，但是这个影响性能，而且功能用static_cast也能做。
 
-dynamic_cast的第二个强悍之处在于向下转型，即base转到derived，这个在类似的分发函数中很常见。这个时候，运行时检查就会执行。
-（1）对expr指向或者标记的，进行了最多继承的对象对象，进行检测。如何检测？expression指向一个基类对象。
-有一种对象，这对象的类型必须是从这个基类派生出来的派生类中，而且这种对象只有一个，那么返回值就会是那个唯一的对象的值，这就是向下转型。
+#### dynamic_cast的几个功能为什么需要多态类
+暂时我还不知道，不是多态，按道理也能做类似的转换。
