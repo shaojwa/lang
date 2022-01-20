@@ -1,0 +1,9 @@
+```
+earth
+word
+```
+```
+er,ir,ur在重读音节中发ee
+or在w之后发ee
+ear组合后面接辅音时常常发ee
+```
