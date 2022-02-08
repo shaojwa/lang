@@ -1,4 +1,5 @@
 ```
+在英式英语中非常独特
 god
 hospital
 problem
@@ -6,4 +7,6 @@ watch
 box
 stop
 元音字母o在重读闭音节中发这个音，注意英式和美式区别。
+wash
+what
 ```
