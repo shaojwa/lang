@@ -1,5 +1,5 @@
 ```
-as  in exerscise
+as in exerscise
 wealth
 theft
 envy
