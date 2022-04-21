@@ -11,5 +11,5 @@
 6. thread-local
 7. range-for
 8. lambda
-9. nullptr
-10. constexpr
+9. nullptr-constexpr
+10. static_assert
