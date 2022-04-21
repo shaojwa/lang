@@ -25,7 +25,7 @@
 
 
 #### c++11
-0. [c++11为什么叫c++2.0](2022/202204_why_called_cpp2.0.md)
+0. [c++11为什么叫c++2.0](/2022/202204_why_called_cpp2.0.md)
 1. [auto自动类型推断](/2021/20210506_cpp_auto.md)
 2. [全局的begin和end](/2021/20210506_begin_end.md)
 3. [decltype使用](/2021/20210311_decltype.md)
