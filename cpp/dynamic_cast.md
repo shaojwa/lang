@@ -2,13 +2,13 @@ https://en.cppreference.com/w/cpp/language/dynamic_cast
 
 https://stackoverflow.com/questions/35959921/what-is-side-cast-or-cross-cast-in-dynamic-cast-in-c
 
-#### 为什么需要 dynamic_cast
-看cpprefernece，我们看dynamic_cast能实现的功能，我们知道，其中的第4条，第5条是dynamic_cast独有的。
-但是，我现在感觉，dynamic_cast能做void-convert，以及在downcast时做运行时检查，以及能做一个sidecast。
-但是似乎并没有足够的理由使用dynamic_cast。何况这几个功能都需要是多态类。
-
 #### dynamic_cast 从语言的角度来说是修饰符还是运算符？
 虽然cppreference只是说，这是一个conversion，但准确说，我认为这是运算符（operator），和sizeof()一样。
+
+#### 为什么需要 dynamic_cast
+看cpprefernece中描述dynamic_cast能实现的功能，其中的第4条、第5条是dynamic_cast独有的。
+但是，我现在感觉，dynamic_cast能做void-convert，以及在downcast时做运行时检查，以及能做一个sidecast。
+但是似乎并没有足够的理由使用dynamic_cast。何况这几个功能都需要是多态类。
 
 #### new_type的类型
 这是一个类型定义，可以是一个指针类型，也可以是一个引用类型。注意，这里没说是 class 类型，说明一个class类型的变量，是不能通过dynamic_cast转为另外一个class_type的。
