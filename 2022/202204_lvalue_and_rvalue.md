@@ -35,10 +35,13 @@ C++11中定义了集中情况的expression是xvalue的:
 因为a++返回的是一个临时的对象，返回的对象已经和a没有关系，所以a++和++a是有区别的。
 所以，右值只能得到一个对象的值，但是我们却无法得到这个对象的identity。也许是根本就没这个object，也许是得不到这个object的identity。
 
-
+## 一些问题
 #### 一个表达式的左值或者右值属性和这个表达式的类型无关
 ```
 the lvalueness or rvalueness of an expression is independent of its type. 
 ```
-a（单单一个变量也是一个表达式）这个表达式的类型是int 还是long和这个表达式是左值还是右值没有关系。
-
+比如：
+```
+Widget&& var1 = makeWidget()
+```
+表达式的类别是左值，但是这个表达式的类型是右值引用。var是对右值的引用，但他自己不是右值。var本身是左值还是右值，和他是对右值的引用还是对左值的引用没有关系。
