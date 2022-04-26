@@ -3,14 +3,16 @@ https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers
 #### 什么是值类别
 这是C++11引入的一个概念，包括左值，纯右值，xvalue，通用左值，右值。这个概念非常复杂，分类很多。
 
-#### 什么是左值
+#### 什么是左值（lvalue）
 三种基本类别之一，我们可以简单这么记忆，在C++11之前，可以放在等号左边的就是做左值，能放左边的也都能取地址。
 
-### 什么是纯右值
+### 什么是纯右值（prvalue）
 三种基本类别之一。
 
-#### 什么是是xvalue
-三种基本类别之一，我喜欢把这种类型称为`可重用值`，C++11中定义了集中情况的expression是xvalue的:
+#### 什么是临终值（xvalue）
+三种基本类别之一，x的意思是expiring，表示将要过期，不过喜欢把这种类型称为`可重用值`，因为这种类型的值就是表示这个对象可以重用。
+
+C++11中定义了集中情况的expression是xvalue的:
 1. 比如返回值为对象rvalue-reference的函数，比如std::move()。
 2. 右值数组a的某个元素，即`a[n]`。
 3. 右值元素a的非静态非引用成员m，即`a.m`
@@ -34,17 +36,9 @@ https://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers
 所以，右值只能得到一个对象的值，但是我们却无法得到这个对象的identity。也许是根本就没这个object，也许是得不到这个object的identity。
 
 
-#### 一个变量的类型是右值引用，但是这个变量有左值属性。
-```
-Widget makeWidget();                       // factory function for Widget 
-Widget&& var1 = makeWidget()               // var1 is an lvalue, but its type is rvalue reference (to Widget)
-```
-
-1. 一个表达式，有一种属性叫引用属性，包括对右值的引用以及对左值的引用，这个左右都是针对的引用的对象，而非变量或者表达式本身。
-2. 变量或者表达本身身也有另外一种属性，叫左右值属性，一个表达式的引用属性和左右值属性，是两个维度的属性。
-
-
 #### 一个表达式的左值或者右值属性和这个表达式的类型无关
 ```
 the lvalueness or rvalueness of an expression is independent of its type. 
 ```
+a（单单一个变量也是一个表达式）这个表达式的类型是int 还是long和这个表达式是左值还是右值没有关系。
+
