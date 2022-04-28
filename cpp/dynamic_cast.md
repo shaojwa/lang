@@ -1,6 +1,6 @@
-https://en.cppreference.com/w/cpp/language/dynamic_cast
-
-https://stackoverflow.com/questions/35959921/what-is-side-cast-or-cross-cast-in-dynamic-cast-in-c
+1. https://en.cppreference.com/w/cpp/language/dynamic_cast
+2. https://stackoverflow.com/questions/35959921/what-is-side-cast-or-cross-cast-in-dynamic-cast-in-c
+3. https://www.zhihu.com/question/22445339
 
 #### cast怎么读
 cast是有这个单词的，其中的一个意思是铸模，可能用在这里解释比较合适。
