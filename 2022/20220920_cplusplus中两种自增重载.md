@@ -12,11 +12,16 @@ buffers_iterator operator++(int) {
 }
 ```
 一员运算符的重载中，这个奇怪的带int参数的重载，代表奇怪的post形式。因为一般说来，一元运算符都是在前面的。比如下面的运算：
-```
-unary minus(-)
-NOT(!)
-Addressof operator(&)
-dereference operator(*)
-sizeof()
-```
+
+- Increment: ++x, x++
+- Decrement: −−x, x−−
+- Address: &x
+- Indirection: *x
+- Positive: +x
+- Negative: −x
+- Ones' complement: ~x
+- Logical negation: !x
+- Sizeof: sizeof x, sizeof(type-name)
+- Cast: (type-name) cast-expression
+
 所以，比较正常的，没有参数的用来表示++i，而有参数的代表i++。
