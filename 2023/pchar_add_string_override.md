@@ -19,7 +19,8 @@ Dump of assembler code for function pchar_add_str(char const*, std::string):
    0x0000000000400c79 <+28>:    mov    -0x10(%rbp),%rcx
    0x0000000000400c7d <+32>:    mov    %rcx,%rsi
    0x0000000000400c80 <+35>:    mov    %rax,%rdi
-   0x0000000000400c83 <+38>:    callq  0x400e33 <std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
+   0x0000000000400c83 <+38>:    callq  0x400e33 <std::operator+<char, std::char_traits<char>, std::allocator<char> >(
+                          char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)>
    0x0000000000400c88 <+43>:    mov    -0x8(%rbp),%rax
    0x0000000000400c8c <+47>:    leaveq
    0x0000000000400c8d <+48>:    retq
