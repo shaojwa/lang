@@ -1,0 +1,4 @@
+https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1968.pdf
+
+Note that local variables are stored as non-mutable members. 
+This is to make code that tries to modify a local variable stored by copy to fail.
