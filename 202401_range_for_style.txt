@@ -1,0 +1,2 @@
+using 'auto&' without space between 'auto' and '&'
+need space before and after ':'
