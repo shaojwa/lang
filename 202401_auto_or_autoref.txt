@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/29859796/c-auto-vs-auto
+
+in most cases, we need to use auto-ref.
